@@ -6,4 +6,4 @@ def home(request):
     return HttpResponse('<h1>Home page connected!</h1>')
 
 def about(request):
-    return HttpResponse('<p>Plan out your future game weeks for fantasy premier league.</p>')
+    return render(request, 'about.html')
