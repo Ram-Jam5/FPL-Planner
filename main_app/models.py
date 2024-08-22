@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 GOALKEEPERS = (
@@ -105,3 +106,7 @@ class Team(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse("teams-detail", kwargs={"team.id": self.id})
+    

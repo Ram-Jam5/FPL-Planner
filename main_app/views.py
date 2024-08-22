@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic.edit import CreateView
 from .models import  Team
 
 # Create your views here.
@@ -16,3 +17,8 @@ def teams_index(request):
 def teams_detail(request, teams_id):
     team = Team.objects.get(id=teams_id)
     return render(request, 'teams/detail.html', {'team':team})
+
+class TeamsCreate(CreateView):
+    model = Team
+    fields = '__all__'
+    success_url = '/teams/'
