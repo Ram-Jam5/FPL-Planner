@@ -108,5 +108,5 @@ class Team(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse("teams-detail", kwargs={"team.id": self.id})
+        return reverse("teams-detail", kwargs={"teams_id": self.id})
     

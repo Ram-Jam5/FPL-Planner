@@ -14,7 +14,7 @@
             <h2>Goalkeeper</h2>
             <ul> 
                 <li>
-                    {{team.goalkeeper}}
+                    {{ team.goalkeeper }}
                 </li>
             </ul>
         </div>
@@ -30,18 +30,22 @@
         <div class="midfielders-container">
             <h2>Midfielders</h2>
             <ul> 
-                <li>{{team.midfielder1}}</li>
-                <li>{{team.midfielder2}}</li>
-                <li>{{team.midfielder3}}</li>
+                <li>{{ team.midfielder1 }}</li>
+                <li>{{ team.midfielder2 }}</li>
+                <li>{{ team.midfielder3 }}</li>
             </ul>
         </div>
         <div class="forwards-container">
             <h2>Forwards</h2>
             <ul> 
-                <li>{{team.forward1}}</li>
-                <li>{{team.forward2}}</li>
-                <li>{{team.forward3}}</li>
+                <li>{{ team.forward1 }}</li>
+                <li>{{ team.forward2 }}</li>
+                <li>{{ team.forward3 }}</li>
             </ul>
+        </div>
+        <div class="team-actions">
+            <a href="{% url 'teams-update' team.id %}" class="btn warn">Edit</a>
+            <a href="{% url 'teams-delete' team.id %}" class="btn danger">delete</a>
         </div>
     </div>
 </section>
