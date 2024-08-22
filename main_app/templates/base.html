@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPL Planner</title>
     {% block head %} 
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
 </head>
     <body>
         <header>
             <div class="header-logo-container">
                 <a href="/">
-                    <img src="" alt="The FPL Planner Logo" />
+                    <img src="{% static 'images/premier-league-1.svg' %}" alt="The FPL Planner Logo" />
                 </a>
             </div>
         </header>
         <nav>
             <ul>
+                <li><a href="/teams">My Teams</a></li>
                 <li><a href='/about'>About</a></li>
             </ul>
         </nav>

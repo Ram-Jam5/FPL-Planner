@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/teams/teams-index.css' %}"/>
+{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Team List</h1>
+</section>
+<section class="card-container">
+    {% for team in teams %}
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">{{ team.name }} (4-3-3)</h2>
+                <p>GK:{{ team.goalkeeper }} DEFENDERS: {{ team.defender1 }}, {{ team.defender2 }}, {{ team.defender3 }}, {{ team.defender4 }} MIDFIELDERS: {{ team.midfielder1 }}, {{ team.midfielder2 }}, {{ team.midfielder3 }} FORWARDS: {{team.forward1 }}, {{team.forward2 }}, {{team.forward3 }}  </p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock %}
