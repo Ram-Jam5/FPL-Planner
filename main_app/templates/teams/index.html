@@ -10,10 +10,12 @@
 <section class="card-container">
     {% for team in teams %}
         <div class="card">
-            <div class="card-content">
-                <h2 class="card-title">{{ team.name }} (4-3-3)</h2>
-                <p>GK:{{ team.goalkeeper }} DEFENDERS: {{ team.defender1 }}, {{ team.defender2 }}, {{ team.defender3 }}, {{ team.defender4 }} MIDFIELDERS: {{ team.midfielder1 }}, {{ team.midfielder2 }}, {{ team.midfielder3 }} FORWARDS: {{team.forward1 }}, {{team.forward2 }}, {{team.forward3 }}  </p>
-            </div>
+            <a href="{% url 'teams-detail' team.id %}">
+                <div class="card-content">
+                    <h2 class="card-title">{{ team.name }} (4-3-3)</h2>
+                    <p>GK:{{ team.goalkeeper }} DEFENDERS: {{ team.defender1 }}, {{ team.defender2 }}, {{ team.defender3 }}, {{ team.defender4 }} MIDFIELDERS: {{ team.midfielder1 }}, {{ team.midfielder2 }}, {{ team.midfielder3 }} FORWARDS: {{team.forward1 }}, {{team.forward2 }}, {{team.forward3 }}  </p>
+                </div>
+            </a>
         </div>
     {% endfor %}
 </section>
