@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
+from django.contrib.auth.models import User
 # Create your models here.
 GOALKEEPERS = (
     ('Martinez', ' Emiliano Martinez'),
@@ -103,10 +103,15 @@ class Team(models.Model):
         choices=FORWARDS,
         default=FORWARDS[2][0]
     )
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
     
     def get_absolute_url(self):
         return reverse("teams-detail", kwargs={"teams_id": self.id})
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
     
