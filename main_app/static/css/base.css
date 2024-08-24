@@ -6,14 +6,13 @@ html {
 
 ::before,
 ::after {
-    box-sizing: innherit;
+    box-sizing: inherit;
 }
 
 /* resets the font size to 62.5% of the user preference - most browser configs = 10px */
 
 :root {
     font-size: 62.5%;
-    --nav-bg-ff: #ff0000;
 }
 
 body {
@@ -90,18 +89,20 @@ nav li {
     padding: 5px 8px;
 }
 
+/* Ensure the header container spans the full width */
 .header-logo-container {
-    display: inline-block;
-    border: 2px solid #000; /* Border around the container */
-    padding: 10px;
-    max-width: 500px;
-    margin: auto;
-    box-sizing: border-box; /* Ensure padding/border are included in the width/height */ /* Ensure border visibility for debugging */
+  width: 100%;
+  height: auto; /* Allows height to adjust based on content */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  padding: 0; /* Remove padding if not needed */
 }
+
+/* Make the image stretch across the container */
 .header-logo-container img {
-    display: block; /* Remove extra space below the image */
-    max-width: 100%; /* Ensure the image scales correctly */
-    height: auto; /* Maintain aspect ratio *//* Ensure no internal SVG border affects layout */
+  width: 100%; /* Stretch the image to fill the container width */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: contain; /* Ensures the image scales proportionally */
 }
 
 .page-header {
@@ -256,7 +257,7 @@ nav li {
   .header-logo-container {
     /* visual fix to help align logo */
     padding-top: 6px;
-    width: 256px;
+    width: 1360px;
     height: 256px;
   }
 

@@ -26,10 +26,12 @@ def teams_detail(request, teams_id):
 
 class TeamsCreate(LoginRequiredMixin, CreateView):
     model = Team
-    fields = '__all__'
-    success_url = '/teams/'
-    exclude = ('User',)
+    fields = ['name', 'goalkeeper','defender1', 'defender2', 'defender3', 'defender4', 'midfielder1', 'midfielder2', 'midfielder3', 'forward1', 'forward2', 'forward3']
+    success_url = '/teams/' 
     
+    def form_valid(self, form):
+        form.instance.user = self.request.user  
+        return super().form_valid(form)      
     
 class TeamsUpdate(LoginRequiredMixin, UpdateView):
     model=Team

@@ -14,7 +14,7 @@
         <header>
             <div class="header-logo-container">
                 <a href="/">
-                    <img src="{% static 'images/premier-league-1.svg' %}" alt="The FPL Planner Logo" />
+                    <img src="{% static 'images/headerbackground.jpg' %}" alt="The FPL Planner Logo" />
                 </a>
             </div>
         </header>
@@ -29,7 +29,7 @@
                           {% csrf_token %}
                           <button type="submit">Log out</button>
                         </form>
-                      </li>
+                    </li>
                 {% else %}
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'home' %}">Login</a></li>

@@ -111,7 +111,5 @@ class Team(models.Model):
     def get_absolute_url(self):
         return reverse("teams-detail", kwargs={"teams_id": self.id})
     
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+    
     

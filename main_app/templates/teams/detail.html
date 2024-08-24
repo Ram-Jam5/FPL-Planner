@@ -7,7 +7,7 @@
 <section class="team-container">
     <div class="team-details">
         <div class="detail-background">
-            <img src="{% static '/images/stadium3_generated.jpg' %}" alt="Soccer Stadium and Pitch">
+            <!-- <img src="{% static '/images/stadium3_generated.jpg' %}" alt="Soccer Stadium and Pitch"> -->
         </div>
         <h1>{{ team.name }}</h1>
         <div class="goalkeeper-details">
@@ -45,7 +45,7 @@
         </div>
         <div class="team-actions">
             <a href="{% url 'teams-update' team.id %}" class="btn warn">Edit</a>
-            <a href="{% url 'teams-delete' team.id %}" class="btn danger">delete</a>
+            <a href="{% url 'teams-delete' team.id %}" class="btn danger">Delete</a>
         </div>
     </div>
 </section>
