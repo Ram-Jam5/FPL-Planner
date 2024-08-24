@@ -16,10 +16,13 @@ ul {
 }  
 li{
   padding: 10px;
+  list-style-type: none;
+  font-size: 26px;
   
 }
 h2 {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .team-actions{
