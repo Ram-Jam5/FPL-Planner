@@ -6,23 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPL Planner</title>
-    {% block head %} 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static '/image/pngegg_small.ico' %}">
+    {% block head %} 
     {% endblock %}
 </head>
     <body>
         <header>
             <div class="header-logo-container">
                 <a href="/">
-                    <img src="{% static 'images/headerbackground.jpg' %}" alt="The FPL Planner Logo" />
+                    <img src="{% static 'images/pngegg.png' %}" alt="The FPL Planner Logo" />
                 </a>
             </div>
         </header>
+   
         <nav>
             <ul>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'teams-index' %}">My Teams</a></li>
-                    <li><a href="{% url 'teams-create' %}">Add a team</a></li>
+                    <li><a href="{% url 'teams-create' %}">Add a Team</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li>
                         <form id="logout-form" method="post" action="{% url 'logout' %}">

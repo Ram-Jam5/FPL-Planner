@@ -87,8 +87,11 @@ nav ul {
 
 nav li {
     padding: 5px 8px;
+    list-style: none;
 }
-
+li a {
+  text-decoration: none;
+}
 /* Ensure the header container spans the full width */
 .header-logo-container {
   width: 100%;
@@ -101,8 +104,8 @@ nav li {
 /* Make the image stretch across the container */
 .header-logo-container img {
   width: 100%; /* Stretch the image to fill the container width */
-  height: auto; /* Maintain the aspect ratio */
-  object-fit: contain; /* Ensures the image scales proportionally */
+  height: 35px; /* Maintain the aspect ratio */
+  object-fit: fill; /* Ensures the image scales proportionally */
 }
 
 .page-header {
@@ -257,8 +260,8 @@ nav li {
   .header-logo-container {
     /* visual fix to help align logo */
     padding-top: 6px;
-    width: 1360px;
-    height: 256px;
+    width: 256px;
+    height: 35px;
   }
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {

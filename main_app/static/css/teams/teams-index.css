@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 200;
   }
   
   .card {
-    width: 275px;
+    width: 400px;
     margin: 10px;
     border: var(--borders);
     box-shadow: var(--card-box-shadow);
