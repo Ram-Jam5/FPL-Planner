@@ -16,7 +16,7 @@ main {
   }
   
   .header-logo-container {
-    display: none;
+    display: flex;
   }
   
   .logo-container {

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPL Planner</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link rel="icon" type="image/x-icon" href="{% static '/image/pngegg_small.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/faveico.ico' %}">
     {% block head %} 
     {% endblock %}
 </head>
@@ -19,7 +19,6 @@
                 </a>
             </div>
         </header>
-   
         <nav>
             <ul>
                 {% if user.is_authenticated %}
