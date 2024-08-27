@@ -9,5 +9,5 @@ urlpatterns = [
      path('teams/create/', views.TeamsCreate.as_view(), name='teams-create'),
      path('teams/<int:pk>/update/', views.TeamsUpdate.as_view(), name='teams-update'),
      path('teams/<int:pk>/delete/', views.TeamsDelete.as_view(), name='teams-delete'),
-     path('accounts/signup/', views.signup, name='signup'),
+     path('accounts/signup/', views.SignUp.as_view(), name='signup'),
 ]
