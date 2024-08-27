@@ -20,7 +20,29 @@
     width: 100%;
     
   }
-  
+  .all-players{
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    justify-content: space-evenly;
+  }
+
+  .goalkeeper-list{
+    padding: 10px;
+  }
+
+  .defender-list{
+    padding: 10px
+  }
+
+  .midfielder-list{
+    padding: 10px;
+  }
+
+  .forward-list{
+    padding: 10px;
+  }
+
   .usr-img {
     width: 100%;
     border-radius: var(--card-border-radius);

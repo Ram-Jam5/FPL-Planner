@@ -20,5 +20,43 @@
         </div>
     {% endfor %}
 </section>
+
 <hr>
+<div class="all-players">
+    <section class="goalkeeper-list">
+        <h2>All Goalkeepers</h2>
+        <ul>
+            {% for goalkeeper in goalkeepers %}
+                <li>
+                    {{ goalkeeper }}
+                </li>
+            {% endfor %}    
+        </ul>
+    </section>
+    <section class="defender-list">
+        <h2>All Defenders</h2>
+        <ul>
+            {% for defender in defenders %}
+                <li>{{ defender }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="midfielder-list">
+        <h2>All Midfielders</h2>
+        <ul>
+            {% for midfielder in midfielders %}
+                <li>{{ midfielder }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="forward-list">
+        <h2>All Forwards</h2>
+        <ul>
+            {% for forward in forwards %}
+                <li>{{ forward }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+
 {% endblock %}

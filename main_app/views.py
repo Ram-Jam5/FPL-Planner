@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import  Team
+from .models import  Team, GOALKEEPERS, DEFENDERS, MIDFIELDERS, FORWARDS
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -17,7 +17,11 @@ def about(request):
 @login_required
 def teams_index(request):
     teams = request.user.team_set.all()
-    return render(request, 'teams/index.html', { 'teams':teams })
+    goalkeepers = [goalkeeper[1] for goalkeeper in GOALKEEPERS]
+    defenders = [defender[1] for defender in DEFENDERS]
+    midfielders = [midfielder[1] for midfielder in MIDFIELDERS]
+    forwards = [forward[1] for forward in FORWARDS]
+    return render(request, 'teams/index.html', { 'teams':teams, 'goalkeepers':goalkeepers, 'defenders':defenders, 'midfielders':midfielders, 'forwards':forwards })
 
 @login_required
 def teams_detail(request, teams_id):
