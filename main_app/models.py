@@ -15,7 +15,7 @@ DEFENDERS = (
     ('Alexander-Arnold', 'Trent Alexander-Arnold'),
     ('Gvardiol', 'Josko Gvardiol'),
     ('Martinez', 'Lissandro Martinez'),
-    ('Saliba', 'William Salbia'),
+    ('Saliba', 'William Saliba'),
     ('Virgil', 'Virgil Van Dijk'),
     ('Dunk', 'Lewis Dunk'),
     ('Konsa', 'Ezri Konsa Ngoyo'),

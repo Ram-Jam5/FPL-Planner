@@ -41,6 +41,7 @@ body {
     --font-l: 1.8rem;
     --font-reg: 1.6rem;
     --card-border-radius: 6px;
+    
 }
 
 header {
@@ -173,7 +174,7 @@ li a {
 
 @media only screen and (min-width: 768px) {
   header {
-    position: sticky;
+    /* position: sticky; */
     display: flex;
     flex-direction: row;
     top: 0;
