@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'fplplanner.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-if 'ON_HEROKU' in os.environ
+if 'ON_HEROKU' in os.environ:
     DATABASES = {
         "default": dj_database_url.config(
             env='DATABASE_URL',
