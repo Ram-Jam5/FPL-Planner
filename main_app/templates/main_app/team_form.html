@@ -8,14 +8,15 @@
     {% if object %}
         <h1>Edit {{ object.name }}</h1>
     {% else %}
-        <h1>Add a team</h1>
+        <h1>Add a Team</h1>
     {% endif %}
 </div>
+<hr>
 <form action="" method="post" class="form-container">
     {% csrf_token %}
     <table>
         {{ form.as_table }}
-    </table>
+    </table> 
     <button type="submit" class="btn submit">Submit!</button>
 </form>
 

@@ -5,6 +5,12 @@ main {
     flex-wrap: wrap;
     height: 100%;
   }
+  p {
+    font-size: var(--font-xl);
+  }
+  .user-logged h1 {
+    font-size: var(--font-xl);
+  }
   
   main > section {
     width: 100%;

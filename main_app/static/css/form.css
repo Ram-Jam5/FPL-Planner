@@ -40,11 +40,28 @@
   
   input {
     background-color:  rgb(250, 235, 215);
-    border-color: blue;
+    border: 2px solid;
+    border-color: rgb(104, 161, 143);
     border-radius: 5px 5px 5px 5px;
   }
   select {
     background-color: rgb(250, 235, 215);
     color: rgb(38, 32, 70);
+    border: 2px solid;
+    border-color: rgb(104, 161, 143);
     border-radius: 5px 5px 5px 5px;
   }
+  label {
+    color: rgb(112, 52, 147);
+    font-size: var(--font-xl);
+  }
+  .page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(38, 32, 70);
+  }
+  hr {
+    border: 1px solid  rgb(250, 235, 215);
+  }
+  

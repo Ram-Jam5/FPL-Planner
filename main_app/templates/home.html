@@ -14,6 +14,11 @@
       <button type="submit" class="btn submit">Login</button>
     </form>
   </section>
+{% else %}
+  <section class="user-logged">
+    <h1>Welcome, {{ user.username }}!</h1>
+    <p>Welcome to the FPL planner. If it's your first time here check out the about page.</p>
+  </section>
 {% endif %}
   
 {% endblock %}
